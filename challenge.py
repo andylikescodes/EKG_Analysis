@@ -11,8 +11,6 @@ import wave
 import numpy as np
 import pandas as pd
 import math
-from sklearn.decomposition import PCA
-import matplotlib.pyplot as plt
 
 # TODO: Debug record errors
 
