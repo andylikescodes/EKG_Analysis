@@ -40,7 +40,7 @@ class Signal(object):
         data : 1-dimensional array with input signal data
         RPeaks : array of R Peak indices
         RRintervals : array of RR interval lengths
-        
+
     """
 
     def __init__(self, name, data):
@@ -61,10 +61,10 @@ class Signal(object):
 
         self.RRintervals = wave.interval(self.RPeaks)
         self.RRbins = wave.interval_bin(self.RRintervals)
-        
+
         print(self.RRintervals)
 
-
+'''
 record = 'A00001'
 data = wave.load(record)
 plot.plot(data)
@@ -73,7 +73,7 @@ sig = Signal(record, data)
 coords = [(i, sig.data[i]) for i in np.nditer(sig.RPeaks)]
 plot.plotCoords(sig.data, coords)
 
-
+'''
 
 """
 record = 'A00269'
@@ -255,7 +255,7 @@ def applyPCA(testData, isNoise):
 
 
 def get_answer(record, data):
-    
+
     answer = ""
     try:
         print ('processing record: ' + record)
